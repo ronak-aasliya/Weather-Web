@@ -1,0 +1,89 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.css">
+    <title>Weather</title>
+</head>
+<body>
+
+    <div class="bg" id = "bg1">
+        <div class="blur">
+    <h1>Weather</h1>
+    <div class="all">
+    <form action="" class="temp_form">
+        <input type="text" class="input" id="cityname" placeholder="Another Location" autocomplete="off">
+        <button type="submit" class="btn" id="submitbtn">Search</button>
+    </form>
+    <ul class="city">
+        <li><button onclick = "LocFunction('Delhi')">Delhi</button></li>
+        <li><button onclick = "LocFunction('Mumbai')">Mumbai</button></li>
+        <li><button onclick = "LocFunction('Udaipur')">Udaipur</button></li>
+        <li><button onclick = "LocFunction('Jaipur')">Jaipur</button></li>
+    </ul>
+    <h3>Weather Details</h3>
+    <ul class="details">
+        <li>Min Temprature:<span id="mintemp">0</span></li>
+        <li>Max Temprature:<span id="maxtemp">0</span> </li>
+        <li>Pressure: <span id="pressure">0</span></li>
+        <li>Humidity: <span id="humidity">0</span></li>
+    </div>
+    </div>
+    <div class="card">
+        <div class="info">
+            <h1 class="temp" id="temp"> <span id="temp_real_val">00°</span></h1>
+            <div class="locDate">
+            <p class="location" id="city_name">Search Location</p>
+            <p id="date">19-12-2022</p>
+            </div>
+            <p id="temp_status"><i class="fa-solid fa-cloud-showers-heavy"></i></p>
+        </div>
+    
+    </div>
+    </div>
+    <script src="js/main.js"></script>
+    <script>
+        const curDate = document.getElementById("date");
+        
+    
+        const getCurrentDay = () => {
+            const weekday = ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"];
+            let currentTime = new Date();
+            let day = weekday[currentTime.getDay()];
+            return day;
+        };
+    
+        const getCurrentTime = () => {
+            const months = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+            let curTime = new Date();
+            let month = months[curTime.getMonth() ];
+            let date = curTime.getDate();
+    
+            let hour = curTime.getHours();
+            let mins = curTime.getMinutes();
+    
+            let period = "AM";
+    
+            if(hour> 11){
+                period = "PM";
+                if(hour>12) hour -=12;
+            }
+
+            if(hour<10){
+                hour = '0' + hour;
+            }
+    
+            if(mins<10){
+                mins ='0' + mins;
+            }
+            
+            return `${month} ${date}  |  ${hour}:${mins} ${period}`;
+        }
+    
+        curDate.innerHTML =getCurrentDay() +" | "+ getCurrentTime();
+
+    </script>
+</body>
+</html>

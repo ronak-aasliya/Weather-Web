@@ -1,0 +1,163 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+
+body{
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    display: inline;
+    color:black;
+}
+
+#bg1{
+    background-image: url('../img/imgsunny.jpg');
+    background-position: center;
+    background-repeat:no-repeat;
+    background-size:cover;
+    height: 100%;
+    
+    
+}
+
+/* .blur{
+    backdrop-filter: blur(5px);
+    background: rgba(255, 255, 255, 0.2);
+    height: 100%;
+} */
+
+.bg h1{
+    float: left;
+    margin-top: 50px;
+    margin-left: 50px;
+}
+
+.head{
+    text-align: center;
+    padding-top: 3rem;
+}
+
+.all{
+    height: 100%;
+    width: 600px;
+    float: right;
+    backdrop-filter: blur(20px);
+}
+.temp_form{
+    margin-top: 4rem;
+}
+
+.input{
+    padding: 10px;
+    width: 60%;
+    margin-left: 40px;
+    text-decoration: none;
+    background: transparent;
+    border: 0;
+    border-bottom: 2px solid gray;
+    outline: 0;  
+    font-size: 20px;
+    color: inherit;
+    
+}
+
+::placeholder{
+    color: inherit;
+}
+
+.btn{
+    margin-top: 2px;
+    padding: 6px;
+    width: 120px;
+    font-size: 20px;
+    cursor: pointer;
+    margin-left: 20px ;
+    background: transparent;
+    border: 2px solid #4F4A45;
+    color: inherit;
+    font: inherit;
+}
+.btn:hover{
+    background: #4F4A45;
+    color: white;
+}
+
+ul{
+    margin-top: 1rem;
+    list-style-type: none;
+}
+
+.city{
+    border-bottom: 2px solid gray ;
+    margin: 0 40px ;
+    padding-left: 0;
+    padding-bottom: 1.5rem;
+}
+
+.all h3{
+    margin-left: 40px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+.details{
+    margin: 0 40px;
+    padding: 0;
+    border-bottom: 2px solid gray ;
+    padding-bottom: 1.5rem;
+    
+}
+ul li{
+    padding: .8rem 0;
+}
+
+ul li button{
+    text-decoration: none;
+    border: 0;
+    outline: 0;
+    font-size: 25px;
+    background: transparent;
+    font: inherit;
+    color: inherit;
+    cursor: pointer;
+}
+
+ul li span{
+    text-decoration: none;
+    float:right;
+}
+.card{
+    float: left;
+}
+
+.card .info{
+    display: flex;
+    margin-left: -200px;
+    width: 700px;
+    padding: 5px;
+    margin-top: 66vh;
+}
+
+.card .info .locDate{
+    margin-top: 3.25rem;
+    height: fit-content;
+}
+
+.locDate .location{
+    font-size: 30px;
+}
+#date{
+    margin-top: -22px;
+    padding-left: 2px;
+}
+
+.card .temp{
+    text-align: center;
+    font-size: 80px;
+    padding: 0.5rem;
+    margin-right: 1rem;
+}
+
+#temp_status{
+    margin-top: 6rem;
+    margin-left: 30px;
+    font-size: 40px;
+}
